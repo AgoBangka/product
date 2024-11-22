@@ -486,9 +486,6 @@ header .fa-bars{
 
 .single-product{
     margin-top: 80px;
-}
-
-.single-product .col-2 img{
     padding: 0;
     flex: 1 1 40rem;
     position: relative;
@@ -496,6 +493,10 @@ header .fa-bars{
     max-width: 1200px; 
     padding: 0 15px; 
     position: relative;
+}
+
+.single-product .col-2 img{
+    padding: 0;
 }
 
 .single-product .col-2 {
