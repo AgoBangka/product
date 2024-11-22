@@ -254,3 +254,81 @@ input:focus{
     cursor: pointer;
 }
 
+/* media queries */
+
+
+@media (max-width: 991px) {
+    html{
+    font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+    
+    .home{
+        background-position: center;
+    }
+
+}
+
+    @media (max-width: 768px){
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        width: 240px;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.774);
+        height: 100vh;
+        clip-path: polygon(0 0,100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        margin: 1rem;
+        padding: 1rem;
+        color: #fff;
+        background: #ff8e3d;
+        border: .5rem solid rgba(29, 14, 3, 0.1);
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        border-radius: 2rem;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+
+
+
+}
+
+    @media (max-width: 450px) {
+        html{
+        font-size: 50%;
+        }
+    
+        header{
+            padding: 2rem;
+        }
+
+}
+
+
