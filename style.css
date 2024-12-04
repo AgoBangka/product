@@ -453,8 +453,10 @@ input:focus{
 
 
     /* Gaya untuk form alamat */
+
     .pemesanan {
         margin-top: 20px;
+        font-size: 1.8rem;
       }
       
     .pemesanan label {
@@ -593,25 +595,6 @@ input:focus{
     .single-product select{
         font-size: 1.5rem;
     }
-    /* Gaya untuk form alamat */
-    #address-form {
-        margin-top: 20px;
-      }
-      
-      #address-form label {
-        display: block;
-        margin-top: 10px;
-        font-weight: bold;
-      }
-      
-      #address-form input, #address-form textarea {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
 }
 
     @media (max-width: 450px) {
@@ -622,25 +605,5 @@ input:focus{
         header{
             padding: 2rem;
         }
-
-    /* Gaya untuk form alamat */
-    #address-form {
-        margin-top: 20px;
-      }
-      
-      #address-form label {
-        display: block;
-        margin-top: 10px;
-        font-weight: bold;
-      }
-      
-      #address-form input, #address-form textarea {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
 
 }
