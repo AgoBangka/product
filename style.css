@@ -453,17 +453,17 @@ input:focus{
 
 
     /* Gaya untuk form alamat */
-    #address-form {
+    .pemesanan {
         margin-top: 20px;
       }
       
-      #address-form label {
+    .pemesanan label {
         display: block;
         margin-top: 10px;
         font-weight: bold;
       }
       
-      #address-form input, #address-form textarea {
+      .pemesanan #address-form input, #address-form textarea {
         width: 100%;
         padding: 8px;
         margin-top: 5px;
