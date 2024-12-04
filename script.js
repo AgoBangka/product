@@ -1,5 +1,32 @@
 const cartIcon = document.getElementById('cart-icon');
 const cartPopup = document.getElementById('cart-popup');
+const cart = document.querySelector('.cart');
+
+
+function adjustCartSize() {
+  if (window.matchMedia('(max-width: 800px)').matches) {
+    // Untuk layar kecil (mobile)
+    cartPopup.style.width = '350px';
+    cartPopup.style.padding = '20px';
+    cartPopup.style.fontSize = '14px';
+
+  } else {
+    // Untuk layar besar (desktop)
+    cartPopup.style.width = '800px';
+    cartPopup.style.padding = '20px';
+    cartPopup.style.fontSize = '16px';
+  }
+}
+
+// Jalankan fungsi saat halaman pertama kali dimuat
+adjustCartSize();
+
+// Jalankan fungsi lagi saat ukuran layar berubah
+window.addEventListener('resize', adjustCartSize);
+
+
+
+
 const closeCartButton = document.getElementById('close-cart');
 const checkoutButton = document.getElementById('checkout-button');
 const cartItemsList = document.getElementById('cart-items');
@@ -10,6 +37,7 @@ const addToCartButton = document.getElementById('add-to-cart');
 
 const cartItems = [];
 const phoneNumber = '6285283751548'; // Ganti dengan nomor WhatsApp Anda
+
 
 // Menambahkan produk ke keranjang
 addToCartButton.addEventListener('click', (event) => {
@@ -176,20 +204,3 @@ function updateCart() {
   totalPriceElement.textContent = `Total Harga: Rp${totalPrice.toLocaleString()}`;
   cartBadge.textContent = cartItems.length;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

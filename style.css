@@ -454,6 +454,9 @@ input:focus{
 
     /* Gaya untuk form alamat */
 
+
+    
+    
     .pemesanan {
         margin-top: 20px;
         font-size: 1.8rem;
@@ -465,7 +468,7 @@ input:focus{
         font-weight: bold;
       }
       
-      .pemesanan #address-form input, #address-form textarea {
+      #address-form input, #address-form textarea {
         width: 100%;
         padding: 8px;
         margin-top: 5px;
