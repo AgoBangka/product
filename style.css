@@ -346,11 +346,131 @@ input:focus{
 
 
 
+/* coba */
+/* Gaya untuk tombol tutup */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    color: #e74c3c;
+  }
+  
+  .cart-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+  
+  .cart-popup h2 {
+    margin-top: 0;
+  }
+  
+  #cart-items {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  #cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #total-price {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Pusatkan Tombol Checkout */
+  .popup-actions {
+    display: flex;
+    justify-content: center; /* Menempatkan tombol di tengah */
+    margin-top: 20px;
+  }
+  
+  #checkout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #checkout-button:hover {
+    background-color: #0056b3;
+  }
+  #cart-icon {
+    font-size: 30px;
+    position: fixed;
+    top: 20px;   /* Jarak dari atas */
+    right: 20px; /* Jarak dari kanan */
+    cursor: pointer;
+    color: #333;
+    z-index: 100; /* Pastikan ikon berada di atas elemen lainnya */
+  }
+  
+  #cart-icon:hover {
+    color: #007bff;
+  }
+  
+  #cart-badge {
+    position: absolute;
+    top: -5px; /* Menempatkan badge sedikit di atas ikon */
+    right: -5px; /* Menempatkan badge sedikit di kanan ikon */
+    background-color: red; /* Warna latar belakang badge */
+    color: white; /* Warna teks badge */
+    border-radius: 50%; /* Membuat badge bulat */
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 101; /* Pastikan badge berada di atas ikon */
+  }
+  
 
 
 
 
 
+
+    /* Gaya untuk form alamat */
+    #address-form {
+        margin-top: 20px;
+      }
+      
+      #address-form label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      
+      #address-form input, #address-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      
 
 
 

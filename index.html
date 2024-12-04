@@ -28,12 +28,46 @@
             <a href="http://agobangka.id.biz.id/#review">review</a>
             <a href="http://agobangka.id.biz.id/#contact">contact</a>
         </nav>
-        <div class="icons">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-user"></a>
+
+        <div class="icons" id="cartIcon">
+            <a  id="cart-icon" class="fas fa-shopping-cart">
+                <span id="cart-badge">0</span> <!-- Badge untuk jumlah produk -->
+              </a>
+              
+            
+
+
+              <!-- Popup Keranjang -->
+            <div class="cart-popup" id="cart-popup">
+            <button id="close-cart" class="close-btn"><i class="fas fa-times"></i></button>
+            <h2>Keranjang Anda</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total Harga: Rp0</p>
+
+            <!-- Formulir Alamat sebelum Checkout -->
+    <div id="address-form">
+        <h3>Masukkan Alamat Pengiriman</h3>
+        <form id="shipping-address-form">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" required>
+          <label for="address">Alamat Lengkap:</label>
+          <textarea id="address" required></textarea>
+          <label for="city">Kota:</label>
+          <input type="text" id="city" required>
+          <label for="postal-code">Kode Pos:</label>
+          <input type="text" id="postal-code" required>
+          <label for="phone">Nomor Telepon:</label>
+          <input type="text" id="phone" required>
+        </form>
+      <!-- ini yang di + -->
+  
+            <div class="popup-actions">
+            <button id="checkout-button">Checkout</button>
         </div>
-        </header>
+    </div>
+
+ 
+    </header>
 
         <!-- single product -->
 
@@ -67,38 +101,42 @@
                         <p>Home / Martabak</p>
                         <h1>Martabak original</h1>
                         <h4>Rp.20.000-Rp.40.000</h4>
-                        <select name="" id="">
-                            <option>Pilih Varian</option>
-                            <option>kacang</option>
-                            <option>Coklat </option>
-                            <option>Wijen </option>
-                            <option>ketan hitam </option>
-                            <option>Pisang </option>
-                            <option>Jagung </option>
-                            <option>Kismis </option>
-                            <option>Keju </option>
-                            <option>kacang coklat </option>
-                            <option>pisang coklat </option>
-                            <option>kismis coklat </option>
-                            <option>kismis wijen </option>
-                            <option>kismis pisang </option>
-                            <option>keju kacang </option>
-                            <option>keju coklat </option>
-                            <option>keju wijen </option>
-                            <option>keju ketan </option>
-                            <option>keju pisang </option>
-                            <option>keju jagung </option>
-                            <option>keju kismis </option>
-                            <option>keju kacang coklat </option>
-                            <option>1/2keju 1/2kacang </option>
-                            <option>1/2keju 1/2kacang coklat </option>
-                            <option>keju special</option>
-                            <option>keju istimewa</option>
-                            <option>Spesial campur</option>
+                        <label for="variant"></label>
+                        <select id="variant">
+                            <option>Pilih Toping</option>
+                            <option value="kacang" data-price="20000">Kacang (RP.20000)</option>
+                            <option value="coklat" data-price="20000">Coklat (RP.20.000)  </option>
+                            <option value="wijen" data-price="20000">Wijen (RP.20.000)  </option>
+                            <option value="ketan hitam" data-price="20000">Ketan hitam (RP.20.000)  </option>
+                            <option value="pisang" data-price="20000">Pisang (RP.20.000)  </option>
+                            <option value="jagung" data-price="20000">Jagung (RP.20.000)  </option>
+                            <option value="Kismis" data-price="22000">Kismis (RP.22.000)  </option>
+                            <option value="Keju" data-price="25000">Keju (RP.25.000)  </option>
+                            <option value="Kacang coklat" data-price="25000">Kacang Coklat (RP.25.000)  </option>
+                            <option value="Pisang coklat" data-price="26000">Pisang coklat (RP.26.000)  </option>
+                            <option value="Kismis Coklat" data-price="26000">Kismis Coklat (RP.26.000)  </option>
+                            <option value="Kismis wijen" data-price="26000">Kismis wijen (RP.26.000)  </option>
+                            <option value="Kismis pisang" data-price="26000">Kismis pisang (RP.26.000)  </option>
+                            <option value="Keju kacang" data-price="28000">Keju kacang (RP.28.000)  </option>
+                            <option value="Keju Coklat" data-price="28000">Keju kacang (RP.28.000)  </option>
+                            <option value="Keju wijen" data-price="28000">Keju wijen (RP.28.000)  </option>
+                            <option value="Keju Ketan" data-price="28000">Keju Ketan (RP.28.000)  </option>
+                            <option value="Keju pisang" data-price="28000">Keju pisang (RP.28.000)  </option>
+                            <option value="Keju jagung" data-price="28000">Keju jagung (RP.28.000)  </option>
+                            <option value="Keju kismis" data-price="30000">Keju kismis (RP.30.000)  </option>
+                            <option value="Keju kacang coklat" data-price="32000">Keju kacang coklat (RP.32.000)  </option>
+                            <option value="1/2keju 1/2kacang" data-price="28000">1/2keju 1/2kacang (RP.28.000)  </option>
+                            <option value="1/2keju 1/2kacang coklat" data-price="32000">1/2keju 1/2kacang (RP.32.000)  </option>
+                            <option value="Keju special" data-price="32000">keju special (Rp.32.000)  </option>
+                            <option value="Keju istimewa" data-price="38000">keju istimewa (Rp.38.000)  </option>
+                            <option value="Special campur" data-price="40000">Special campur (RP.40.000)  </option>
                         </select>
     
-                        <input type="number" value="1">
-                        <a href="" class="btn">Add To Cart</a>
+                        <label for="quantity"></label>
+                        <input type="number" id="quantity" value="1" min="1">
+                        <a class="btn" id="add-to-cart">Add To Cart</a>
+
+
                         <h3>Product Details <i class="fa fa-faident"></i></h3>
                         <br>
                         <p>Martabak original dengan berbagai rasa yang harus anda coba </p>
@@ -230,6 +268,8 @@
 
         </div>
     </div>
+
+    <script src="script.js"></script>
 
         <!-- js for toggle menu -->
 
