@@ -6,7 +6,7 @@ const cart = document.querySelector('.cart');
 function adjustCartSize() {
   if (window.matchMedia('(max-width: 800px)').matches) {
     // Untuk layar kecil (mobile)
-    cartPopup.style.width = '350px';
+    cartPopup.style.width = '300px';
     cartPopup.style.padding = '20px';
     cartPopup.style.fontSize = '14px';
 
